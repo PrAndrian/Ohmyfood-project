@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-
 .location{
     text-align: center;
     font-size: 16px;
@@ -113,30 +111,29 @@
     }
 }
 
-.footer{
-    height: 196px;
-    background-color: #353535;
-    padding : 0 22px;
-    &__title{
-        font-family: 'Shrikhand', cursive;
-        margin: 0;
-        color:white;
-        font-size: 16px;
-        padding: 26px 0;
+// -------------------------------------------------------------//
+.menu{
+    
+    .menu__hero{
+        width: 100%;
+        object-fit: cover;
     }
-    &__list{
-        margin: 0;
-        padding : 0;
-        list-style: none;
-        color:white;
-        &__elem{
-            line-height: 1.7        ;
-            &__icon1{
-                margin-right: 10px;
-            }
-            &__icon2{
-                margin-right: 5px;
-            }
+    
+    .menu__header{
+        position: relative;
+        background-color: #F6F6F6;
+        bottom: 68px;
+        z-index: 1000;
+        padding: 24px 32px 0 16px;
+        border-radius: 30px 30px 0px 0px;
+        &__title{
+            font-family: 'Shrikhand', cursive;
+            font-size : 24px;
+        }
+
+        &__icon{
+            color: black;
         }
     }
+    
 }

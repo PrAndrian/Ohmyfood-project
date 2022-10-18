@@ -66,6 +66,13 @@ a, a:visited, a:hover {
 .header nav {
   padding: 15px;
   box-shadow: 0 0 8px gray;
+  text-align: center;
+}
+.header__arrow {
+  font-size: 20px;
+  position: absolute;
+  left: 2rem;
+  top: 35%;
 }
 .header__logo img {
   height: 30px;
@@ -169,6 +176,27 @@ a, a:visited, a:hover {
 }
 .restaurant__cards__elem__footer__description__title {
   margin: 0;
+}
+
+.menu .menu__hero {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.menu .menu__header {
+  position: relative;
+  background-color: #F6F6F6;
+  bottom: 68px;
+  z-index: 1000;
+  padding: 24px 32px 0 16px;
+  border-radius: 30px 30px 0px 0px;
+}
+.menu .menu__header__title {
+  font-family: "Shrikhand", cursive;
+  font-size: 24px;
+}
+.menu .menu__header__icon {
+  color: black;
 }
 
 .footer {

@@ -5,6 +5,14 @@
     nav{
         padding: 15px;
         box-shadow: 0 0 8px gray;
+        text-align: center;
+    }
+
+    &__arrow{
+        font-size: 20px;
+        position: absolute;
+        left: 2rem;
+        top: 35%;
     }
 
     &__logo{
@@ -12,7 +20,5 @@
             height: 30px;
         }
     }
-
-
 }
 

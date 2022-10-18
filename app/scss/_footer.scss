@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+.footer{
+    height: 196px;
+    background-color: #353535;
+    padding : 0 22px;
+    &__title{
+        font-family: 'Shrikhand', cursive;
+        margin: 0;
+        color:white;
+        font-size: 16px;
+        padding: 26px 0;
+    }
+    &__list{
+        margin: 0;
+        padding : 0;
+        list-style: none;
+        color:white;
+        &__elem{
+            line-height: 1.7        ;
+            &__icon1{
+                margin-right: 10px;
+            }
+            &__icon2{
+                margin-right: 5px;
+            }
+        }
+    }
+}

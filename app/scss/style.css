@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.3;
+}
+
+a, a:visited, a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.btn {
+  height: 50px;
+  width: 220px;
+  margin: 33px 0;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-weight: 600;
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+}
+
+.icon::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.flex {
+  display: flex;
+}
+.flex-col {
+  flex-direction: column;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex-jc-c {
+  justify-content: center;
+}
+.flex-jc-sb {
+  justify-content: space-between;
+}
+.flex-ai-c {
+  align-items: center;
+}
+
+.header {
+  position: relative;
+  z-index: 1000;
+}
+.header nav {
+  padding: 15px;
+  box-shadow: 0 0 8px gray;
+}
+.header__logo img {
+  height: 30px;
+}
+
+.location {
+  text-align: center;
+  font-size: 16px;
+  color: #353535;
+  background-color: #EAEAEA;
+  padding: 19px 0;
+}
+.location::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f3c5";
+  padding-right: 19px;
+}
+
+.slogant {
+  background-color: #F7F7F7;
+  height: 289px;
+  margin-bottom: 56px;
+}
+.slogant__title, .slogant__description {
+  text-align: center;
+  margin: auto;
+}
+.slogant__description {
+  width: 306px;
+}
+.slogant__title {
+  width: 250px;
+  padding-top: 45px;
+  padding-bottom: 10px;
+}
+
+.function {
+  padding: 0 22px 70px 22px;
+}
+.function__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  gap: 25px;
+  counter-reset: count;
+}
+.function__list__elem {
+  padding: 25px;
+  height: 74px;
+  width: 100%;
+  background-color: #F7F7F7;
+  border-radius: 20px;
+  box-shadow: 4px 4px 8px gray;
+}
+.function__list__elem__icon {
+  margin-right: 16px;
+  color: #7E7E7E;
+}
+.function__list__elem::before {
+  counter-increment: count 1;
+  content: counter(count) " ";
+  background: #9356DC;
+  height: 26px;
+  width: 26px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: absolute;
+  left: 10px;
+}
+
+.restaurant {
+  padding: 0 22px 64px 22px;
+  background-color: #F7F7F7;
+}
+.restaurant__title {
+  margin: 0;
+  padding-top: 62px;
+  padding-bottom: 28px;
+}
+.restaurant__cards {
+  gap: 20px;
+}
+.restaurant__cards__elem {
+  border-radius: 20px;
+  box-shadow: 4px 4px 8px gray;
+}
+.restaurant__cards__elem__img {
+  height: 12rem;
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.restaurant__cards__elem__footer {
+  border-radius: 0 0 20px 20px;
+  padding: 20px 14px;
+}
+.restaurant__cards__elem__footer__description__title {
+  margin: 0;
+}
+
+.footer {
+  height: 196px;
+  background-color: #353535;
+  padding: 0 22px;
+}
+.footer__title {
+  font-family: "Shrikhand", cursive;
+  margin: 0;
+  color: white;
+  font-size: 16px;
+  padding: 26px 0;
+}
+.footer__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: white;
+}
+.footer__list__elem {
+  line-height: 1.7;
+}
+.footer__list__elem__icon1 {
+  margin-right: 10px;
+}
+.footer__list__elem__icon2 {
+  margin-right: 5px;
+}/*# sourceMappingURL=style.css.map */

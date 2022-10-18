@@ -1,0 +1,18 @@
+.header{
+    position: relative; //z-index fonctionne que avec ça, why ?
+    z-index: 1000;
+
+    nav{
+        padding: 15px;
+        box-shadow: 0 0 8px gray;
+    }
+
+    &__logo{
+        img{
+            height: 30px;
+        }
+    }
+
+
+}
+

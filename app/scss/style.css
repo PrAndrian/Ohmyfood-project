@@ -200,8 +200,8 @@ a, a:visited, a:hover {
 }
 
 .menu .container__menu {
-  margin-top: -4rem;
-  border-radius: 2rem 2rem 0 0;
+  margin-top: -64px;
+  border-radius: 32px 32px 0 0;
   background-color: #f6f6f6;
   z-index: 1;
   position: relative;
@@ -231,14 +231,14 @@ a, a:visited, a:hover {
 .menu .menu__starter__title, .menu .menu__dish__title, .menu .menu__desert__title {
   text-transform: uppercase;
   position: relative;
-  padding-bottom: 0.5rem;
+  padding-bottom: 8px;
   font-weight: 400;
   font-size: 18px;
 }
 .menu .menu__starter__title::after, .menu .menu__dish__title::after, .menu .menu__desert__title::after {
   content: "";
-  width: 3rem;
-  height: 0.25rem;
+  width: 48px;
+  height: 4px;
   background-color: #99e2d0;
   position: absolute;
   left: 0;

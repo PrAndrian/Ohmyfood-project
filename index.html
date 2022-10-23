@@ -12,9 +12,7 @@
 <body>
 
     <div class="loader flex flex-jc-c flex-ai-c">
-        <h2 class="loader__text">
-            MIAM😋
-        </h2>
+        <h2 class="loader-text loader-text-animation" data-content="Ohmyfood">Ohmyfood</h2>
     </div>
 
     <header class="header">
@@ -38,73 +36,67 @@
             <ol class="function__list flex flex-col">
                 <li class="function__list__elem  "> <i class="fa-mobile-alt fas function__list__elem__icon"></i> Choisissez un restaurant</li>
                 <li class="function__list__elem "><i class="fa-list-ul fas function__list__elem__icon"></i>Composez votre menu</li>
-                <li class="function__list__elem "> <i class="fa-store fas function__list__elem__icon"></i>Dégustez au restaurant</li>
+                <li class="function__list__elem "> <i class="fa-store fas function__list__elem__icon function__list__elem__icon-active"></i>Dégustez au restaurant</li>
             </ol>
         </section>
 
         <section class="restaurant">
             <h2 class="restaurant__title">Restaurant</h2>
             <div class="restaurant__cards flex flex-col">
-                <!-- wrap pas besoin de container-->
-                <div class="container__left">
-                    <a href="Menu.html">
-                        <article class="restaurant__cards__elem">
-                            <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" 
-                            alt="card_1" 
-                            class="restaurant__cards__elem__img">
-                            <span class="restaurant__cards__elem__label">Nouveau</span>
-                            <footer class="restaurant__cards__elem__footer " >
-                                <section class="restaurant__cards__elem__footer__description flex flex-jc-sb flex-ai-c">
-                                    <h3 class="restaurant__cards__elem__footer__description__title">La palette du goût</h3>
-                                    <i class="fa-regular fa-heart restaurant__cards__elem__footer__description__icon fa-xl"></i>
-                                </section>
-                                <span class="restaurant__cards__elem__footer__description__subtitle">Ménilmontant</span>
-                            </footer>
-                        </article>
-                    </a>
-                    <a href="Menu.html">
-                        <article class="restaurant__cards__elem">
-                            <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="card_2" class="restaurant__cards__elem__img">
-                            <span class="restaurant__cards__elem__label">Nouveau</span>
-                            <footer class="restaurant__cards__elem__footer " >
-                                <section class="restaurant__cards__elem__footer__description flex flex-jc-sb flex-ai-c">
-                                    <h3 class="restaurant__cards__elem__footer__description__title">La note enchantée</h3>
-                                    <i class="fa-regular fa-heart restaurant__cards__elem__footer__description__icon fa-xl "></i>
-                                </section>
-                                <span class="restaurant__cards__elem__footer__description__subtitle">Charonne</span>
-                            </footer>
-                        </article> 
-                    </a>
-                </div>
-                <!-- wrap besoin de container-->
-                <div class="container__right">
-                    <a href="Menu.html">
-                        <article class="restaurant__cards__elem">
-                            <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="card_3" class="restaurant__cards__elem__img">
-                            <span class="restaurant__cards__elem__label">Nouveau</span>
-                            <footer class="restaurant__cards__elem__footer " >
-                                <section class="restaurant__cards__elem__footer__description flex flex-jc-sb flex-ai-c">
-                                    <h3 class="restaurant__cards__elem__footer__description__title">À la française</h3>
-                                    <i class="fa-regular fa-heart restaurant__cards__elem__footer__description__icon fa-xl"></i>
-                                </section>
-                                <span class="restaurant__cards__elem__footer__description__subtitle">Cité Rouge</span>
-                            </footer>
-                        </article>
-                    </a>
-                    <a href="Menu.html">
-                        <article class="restaurant__cards__elem">
-                            <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="card_4" class="restaurant__cards__elem__img">
-                            <span class="restaurant__cards__elem__label">Nouveau</span>
-                            <footer class="restaurant__cards__elem__footer " >
-                                <section class="restaurant__cards__elem__footer__description flex flex-jc-sb flex-ai-c">
-                                    <h3 class="restaurant__cards__elem__footer__description__title">Le délice des sens</h3>
-                                    <i class="fa-regular fa-heart restaurant__cards__elem__footer__description__icon fa-xl"></i>
-                                </section>
-                                <span class="restaurant__cards__elem__footer__description__subtitle">Folie-Méricourt</span>
-                            </footer>
-                        </article>
-                    </a>
-                </div>
+                <a href="Menu.html">
+                    <article class="restaurant__cards__elem">
+                        <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" 
+                        alt="card_1" 
+                        class="restaurant__cards__elem__img">
+                        <span class="restaurant__cards__elem__label">Nouveau</span>
+                        <footer class="restaurant__cards__elem__footer " >
+                            <section class="restaurant__cards__elem__footer__description flex flex-jc-sb flex-ai-c">
+                                <h3 class="restaurant__cards__elem__footer__description__title">La palette du goût</h3>
+                                <i class="fa-regular fa-heart heart-icon fa-xl"></i>
+                            </section>
+                            <span class="restaurant__cards__elem__footer__description__subtitle">Ménilmontant</span>
+                        </footer>
+                    </article>
+                </a>
+                <a href="Menu.html">
+                    <article class="restaurant__cards__elem">
+                        <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="card_2" class="restaurant__cards__elem__img">
+                        <span class="restaurant__cards__elem__label">Nouveau</span>
+                        <footer class="restaurant__cards__elem__footer " >
+                            <section class="restaurant__cards__elem__footer__description flex flex-jc-sb flex-ai-c">
+                                <h3 class="restaurant__cards__elem__footer__description__title">La note enchantée</h3>
+                                <i class="fa-regular fa-heart heart-icon fa-xl "></i>
+                            </section>
+                            <span class="restaurant__cards__elem__footer__description__subtitle">Charonne</span>
+                        </footer>
+                    </article> 
+                </a>
+                <a href="Menu.html">
+                    <article class="restaurant__cards__elem">
+                        <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="card_3" class="restaurant__cards__elem__img">
+                        <span class="restaurant__cards__elem__label">Nouveau</span>
+                        <footer class="restaurant__cards__elem__footer " >
+                            <section class="restaurant__cards__elem__footer__description flex flex-jc-sb flex-ai-c">
+                                <h3 class="restaurant__cards__elem__footer__description__title">À la française</h3>
+                                <i class="fa-regular fa-heart heart-icon fa-xl"></i>
+                            </section>
+                            <span class="restaurant__cards__elem__footer__description__subtitle">Cité Rouge</span>
+                        </footer>
+                    </article>
+                </a>
+                <a href="Menu.html">
+                    <article class="restaurant__cards__elem">
+                        <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="card_4" class="restaurant__cards__elem__img">
+                        <span class="restaurant__cards__elem__label">Nouveau</span>
+                        <footer class="restaurant__cards__elem__footer " >
+                            <section class="restaurant__cards__elem__footer__description flex flex-jc-sb flex-ai-c">
+                                <h3 class="restaurant__cards__elem__footer__description__title">Le délice des sens</h3>
+                                <i class="fa-regular fa-heart heart-icon fa-xl"></i>
+                            </section>
+                            <span class="restaurant__cards__elem__footer__description__subtitle">Folie-Méricourt</span>
+                        </footer>
+                    </article>
+                </a>
             </div>
         </section>
 

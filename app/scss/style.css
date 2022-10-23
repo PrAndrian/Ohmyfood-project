@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 html {
   font-size: 100%;
   box-sizing: border-box;
@@ -22,10 +23,17 @@ a, a:visited, a:hover {
   color: inherit;
 }
 
+.icon::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
 .header, main, .footer {
-  max-width: 1440px;
+  max-width: 1980px;
   margin: auto;
-  height: 100%;
 }
 
 .flex {
@@ -60,6 +68,25 @@ a, a:visited, a:hover {
 
 .btn-bg-gray {
   background-color: #f6f6f6;
+}
+
+.heart-icon {
+  position: absolute;
+  right: 14px;
+  cursor: pointer;
+}
+.heart-icon:hover::before, .heart-icon:active::before, .heart-icon:focus::before {
+  z-index: 1000;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f004";
+  background: linear-gradient(0deg, #9356dc, #ff79da);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  position: relative;
 }
 
 .header {
@@ -115,13 +142,41 @@ a, a:visited, a:hover {
   z-index: 1001;
   position: fixed;
   background-color: #9356DC;
-  color: white;
-  -webkit-animation: loader 1s linear;
-          animation: loader 1s linear;
+  -webkit-animation: loader 0.5s linear;
+          animation: loader 0.5s linear;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
+}
+.loader-text {
+  color: #FF79DA;
+  font-family: "Shrikhand", cursive;
+}
+.loader-text::before {
+  content: attr(data-content);
+  position: absolute;
+  overflow: hidden;
+  max-width: 100%;
+  color: white;
+  -webkit-animation: loading-text 2s linear;
+          animation: loading-text 2s linear;
+}
+@-webkit-keyframes loading-text {
+  from {
+    max-width: 0;
+  }
+  to {
+    max-width: 100%;
+  }
+}
+@keyframes loading-text {
+  from {
+    max-width: 0;
+  }
+  to {
+    max-width: 100%;
+  }
 }
 
 @-webkit-keyframes loader {
@@ -160,7 +215,6 @@ a, a:visited, a:hover {
 .slogant {
   background-color: #F7F7F7;
   height: 289px;
-  margin-bottom: 56px;
 }
 .slogant__title, .slogant__description {
   text-align: center;
@@ -176,7 +230,8 @@ a, a:visited, a:hover {
 }
 
 .function {
-  padding: 0 22px 70px 22px;
+  padding: 22px 22px 40px 22px;
+  background-color: white;
 }
 .function__list {
   margin: 0;
@@ -198,7 +253,7 @@ a, a:visited, a:hover {
   margin-right: 16px;
   color: #7E7E7E;
 }
-.function__list__elem__icon:last-child {
+.function__list__elem__icon-active {
   color: #9356DC;
 }
 .function__list__elem:last-child {
@@ -236,6 +291,8 @@ a, a:visited, a:hover {
   box-shadow: 4px 4px 8px gray;
   margin-bottom: 18px;
   position: relative;
+  min-width: 288px;
+  width: 100%;
 }
 .restaurant__cards__elem__img {
   height: 192px;
@@ -255,7 +312,7 @@ a, a:visited, a:hover {
 }
 .restaurant__cards__elem__footer {
   border-radius: 0 0 20px 20px;
-  padding: 20px 14px;
+  padding: 20px 0 20px 14px;
 }
 .restaurant__cards__elem__footer__description__title {
   margin: 0;
@@ -265,12 +322,9 @@ a, a:visited, a:hover {
   .function__list {
     flex-direction: row;
   }
-  .container__left, .container__right {
-    min-width: 288px;
-    width: 100%;
-  }
   .restaurant__cards {
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 18px;
     justify-content: center;
     align-items: center;
@@ -299,9 +353,6 @@ a, a:visited, a:hover {
   font-family: "Shrikhand", cursive;
   font-size: 24px;
 }
-.menu .menu__header__icon {
-  color: black;
-}
 .menu .menu__starter, .menu .menu__dish, .menu .menu__desert {
   padding: 0 16px;
 }
@@ -322,16 +373,39 @@ a, a:visited, a:hover {
   bottom: 0;
 }
 .menu .menu__starter__elem, .menu .menu__dish__elem, .menu .menu__desert__elem {
-  background-color: white;
-  box-shadow: 4px 4px 8px gray;
-  border-radius: 16px;
-  padding: 10px 20px 10px 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 10px 20px 10px 10px;
+  margin: 16px 0;
+  background-color: white;
+  box-shadow: 4px 4px 8px gray;
+  border-radius: 16px;
   line-height: 1.5;
   cursor: pointer;
-  margin: 16px 0;
+  -webkit-animation: slideUp 1s forwards;
+          animation: slideUp 1s forwards;
+  opacity: 0;
+}
+@-webkit-keyframes slideUp {
+  0% {
+    transform: translatey(20px);
+    opacity: 0%;
+  }
+  100% {
+    transform: translatey(0px);
+    opacity: 100%;
+  }
+}
+@keyframes slideUp {
+  0% {
+    transform: translatey(20px);
+    opacity: 0%;
+  }
+  100% {
+    transform: translatey(0px);
+    opacity: 100%;
+  }
 }
 .menu .menu__starter__elem__title, .menu .menu__dish__elem__title, .menu .menu__desert__elem__title {
   margin: 0;
@@ -347,6 +421,26 @@ a, a:visited, a:hover {
 }
 .menu .menu__starter__elem__footer__price, .menu .menu__dish__elem__footer__price, .menu .menu__desert__elem__footer__price {
   font-weight: bold;
+}
+.menu .menu__starter__elem:nth-child(1), .menu .menu__dish__elem:nth-child(1), .menu .menu__desert__elem:nth-child(1) {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+.menu .menu__starter__elem:nth-child(2), .menu .menu__dish__elem:nth-child(2), .menu .menu__desert__elem:nth-child(2) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+.menu .menu__starter__elem:nth-child(3), .menu .menu__dish__elem:nth-child(3), .menu .menu__desert__elem:nth-child(3) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+.menu .menu__starter__elem:nth-child(4), .menu .menu__dish__elem:nth-child(4), .menu .menu__desert__elem:nth-child(4) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+.menu .menu__starter__elem:nth-child(5), .menu .menu__dish__elem:nth-child(5), .menu .menu__desert__elem:nth-child(5) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
 }
 .menu .menu__dish {
   margin: 32px 0;

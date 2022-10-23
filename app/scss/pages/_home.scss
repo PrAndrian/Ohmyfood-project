@@ -1,13 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
 .loader{
     height: 100%;
     width: 100%;
     z-index: 1001;
     position: fixed;
     background-color: $primary;
-    color: white;
-    animation: loader 1s linear;
+    animation: loader 0.5s linear;
     animation-fill-mode: both;
     animation-delay: 2s;
+
+    &-text{
+        color: $secondary;
+        font-family: 'Shrikhand', cursive;
+        &::before{
+            content: attr(data-content);
+            position: absolute;
+            overflow: hidden;
+            max-width: 100%;
+            color: white;
+            animation: loading-text 2s linear;
+        }
+
+        @keyframes loading-text {
+            from { max-width: 0; }
+            to { max-width: 100%; }
+        }
+    }
 }
 
 @keyframes loader {
@@ -40,7 +59,6 @@
 .slogant{   
     background-color: #F7F7F7;
     height: 289px;
-    margin-bottom: 56px;
     
     &__title, &__description{
         text-align: center;
@@ -59,7 +77,9 @@
 }
 
 .function{
-    padding: 0 22px 70px 22px ;
+    padding: 22px 22px 40px 22px ;
+    background-color: white;
+    // padding-top: 56px;
 
     &__list{
         margin : 0;
@@ -80,10 +100,9 @@
             &__icon{
                 margin-right: 16px;
                 color: #7E7E7E;
-            }
-
-            &__icon:last-child{
-                color: $primary;
+                &-active{
+                    color: $primary;
+                }
             }
         }
 
@@ -125,6 +144,9 @@
             box-shadow: 4px 4px 8px gray;
             margin-bottom: 18px;
             position: relative;
+            min-width: 288px;
+            width: 100%;
+
             &__img{
                 height: 192px;
                 width: 100%;
@@ -145,11 +167,12 @@
 
             &__footer{
                 border-radius: 0 0 20px 20px ;
-                padding : 20px 14px ;
+                padding : 20px 0 20px 14px ;
                 &__description{
                     &__title{
                         margin: 0;
                     }
+
                 }
 
             }
@@ -162,12 +185,10 @@
     .function__list{
         flex-direction: row;
     } 
-    .container__left,.container__right{
-        min-width: 288px;
-        width: 100%;
-    }
+
     .restaurant__cards{
         flex-direction: row;
+        flex-wrap: wrap;
         gap: 18px;
         justify-content: center;
         align-items: center;

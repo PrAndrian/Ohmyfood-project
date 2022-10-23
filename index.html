@@ -10,6 +10,13 @@
     <title>Oh My Food - Accueil</title>
 </head>
 <body>
+
+    <div class="loader flex flex-jc-c flex-ai-c">
+        <h2 class="loader__text">
+            MIAM😋
+        </h2>
+    </div>
+
     <header class="header">
         <nav>
             <a href="/index.html" class="header__logo" >
@@ -17,14 +24,14 @@
             </a>
         </nav>
     </header>
-    <main>
+    <main class="main">
         <section class="location">Paris, Belleville</section>
         <section class="slogant">
             <h1 class="slogant__title">Réservez le menu qui vous convient</h1>
             <p class="slogant__description">Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
-            <a class="flex flex-jc-c" href="#Explore">
-                <button class="btn">Explorer nos restaurants</button>
-            </a>
+            <button class=" btn btn-bg-gray flex flex-jc-c flex-ai-c" href="#Commander">
+                Explorer nos restaurants
+            </button>
         </section>
         <section class="function">
             <h2 class="function__title">Fonctionnement</h2>
@@ -37,9 +44,10 @@
 
         <section class="restaurant">
             <h2 class="restaurant__title">Restaurant</h2>
-            <section class="restaurant__cards flex flex-col">
+            <div class="restaurant__cards flex flex-col">
+                <!-- wrap besoin de container-->
                 <div class="container__left">
-                    <a  href="Menu.html">
+                    <a href="Menu.html">
                         <article class="restaurant__cards__elem">
                             <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" 
                             alt="card_1" 
@@ -65,12 +73,13 @@
                                 </section>
                                 <span class="restaurant__cards__elem__footer__description__subtitle">Charonne</span>
                             </footer>
-                        </article>
+                        </article> 
                     </a>
                 </div>
+                <!-- wrap besoin de container-->
                 <div class="container__right">
                     <a href="Menu.html">
-                        <article href="Menu.html" class="restaurant__cards__elem">
+                        <article class="restaurant__cards__elem">
                             <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="card_3" class="restaurant__cards__elem__img">
                             <span class="restaurant__cards__elem__label">Nouveau</span>
                             <footer class="restaurant__cards__elem__footer " >
@@ -83,7 +92,7 @@
                         </article>
                     </a>
                     <a href="Menu.html">
-                        <article href="Menu.html" class="restaurant__cards__elem">
+                        <article class="restaurant__cards__elem">
                             <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="card_4" class="restaurant__cards__elem__img">
                             <span class="restaurant__cards__elem__label">Nouveau</span>
                             <footer class="restaurant__cards__elem__footer " >
@@ -96,17 +105,20 @@
                         </article>
                     </a>
                 </div>
+            </div>
         </section>
 
     </main>
     <footer class="footer">
-        <h3 class="footer__title">Ohmyfood</h3>
-        <ul class="footer__list">
-            <li class="footer__list__elem"><a href="/"><i class="fa-solid fa-utensils fa-sm footer__list__elem__icon1"></i>Proposer un restaurant</a></li>
-            <li class="footer__list__elem"><a href="/"><i class="fa-solid fa-handshake-angle fa-sm footer__list__elem__icon2"></i>Devenir Partenaire</a></li>
-            <li class="footer__list__elem"><a href="/">Mentions légales</a></li>
-            <li id="footer__list__contact"><a href="mailto:ohmyfood@gmail.com">Contact</a></li>
-        </ul>
+        <nav>
+            <h3 class="footer__title">Ohmyfood</h3>
+            <ul class="footer__list">
+                <li class="footer__list__elem"><a href="/"><i class="fa-solid fa-utensils fa-sm footer__list__elem__icon1"></i>Proposer un restaurant</a></li>
+                <li class="footer__list__elem"><a href="/"><i class="fa-solid fa-handshake-angle fa-sm footer__list__elem__icon2"></i>Devenir Partenaire</a></li>
+                <li class="footer__list__elem"><a href="/">Mentions légales</a></li>
+                <li id="footer__list__contact"><a href="mailto:ohmyfood@gmail.com">Contact</a></li>
+            </ul>
+        </nav>
     </footer> 
 </body>
 </html> 

@@ -1,5 +1,9 @@
-@import "variables";
-@import "globals";
-@import "header";
-@import "main";
-@import "footer";
+@import "./abstracts/variables";
+@import "./base/typography";
+@import "./base/reset";
+@import "./base/class";
+@import "./components/button";
+@import "./layouts/header";
+@import "./layouts/footer";
+@import "./pages/home";
+@import "./pages/menu";

@@ -20,3 +20,9 @@ a, a:visited, a:hover {
     text-decoration: none;
     color: inherit;
 }
+
+.header,main,.footer{
+    max-width: 1440px;
+    margin: auto;
+    height:100%;
+}

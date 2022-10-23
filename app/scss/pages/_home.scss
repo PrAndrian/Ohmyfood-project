@@ -1,9 +1,3 @@
-.header,main,.footer{
-    max-width: 1440px;
-    margin: auto;
-    height:100%;
-}
-
 .loader{
     height: 100%;
     width: 100%;
@@ -75,6 +69,7 @@
         counter-reset: count;
         
         &__elem{
+            position: relative;
             padding : 25px;
             height: 74px;
             width: 100%;
@@ -100,15 +95,15 @@
             counter-increment: count 1;
             content: counter(count) " ";
             background: $primary;
-            height: 26px;
-            width: 26px;
+            height: 24px;
+            width: 24px;
             border-radius: 100px;
             display: flex;
             justify-content: center;
             align-items: center;
             color: white;
             position: absolute;
-            left: 10px;
+            left: -10px;
         }
     }
 }

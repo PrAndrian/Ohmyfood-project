@@ -22,6 +22,12 @@ a, a:visited, a:hover {
   color: inherit;
 }
 
+.header, main, .footer {
+  max-width: 1440px;
+  margin: auto;
+  height: 100%;
+}
+
 .flex {
   display: flex;
 }
@@ -103,12 +109,6 @@ a, a:visited, a:hover {
   margin-right: 5px;
 }
 
-.header, main, .footer {
-  max-width: 1440px;
-  margin: auto;
-  height: 100%;
-}
-
 .loader {
   height: 100%;
   width: 100%;
@@ -186,6 +186,7 @@ a, a:visited, a:hover {
   counter-reset: count;
 }
 .function__list__elem {
+  position: relative;
   padding: 25px;
   height: 74px;
   width: 100%;
@@ -207,15 +208,15 @@ a, a:visited, a:hover {
   counter-increment: count 1;
   content: counter(count) " ";
   background: #9356DC;
-  height: 26px;
-  width: 26px;
+  height: 24px;
+  width: 24px;
   border-radius: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
   position: absolute;
-  left: 10px;
+  left: -10px;
 }
 
 .restaurant {

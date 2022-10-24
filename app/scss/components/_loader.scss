@@ -1,0 +1,37 @@
+.loader{
+    height: 100%;
+    width: 100%;
+    z-index: 1001;
+    position: fixed;
+    background-color: $primary;
+    animation: loader 0.5s linear;
+    animation-fill-mode: both;
+    animation-delay: 3s;
+
+    &-text{
+        color: $secondary;
+        font-family: 'Shrikhand', cursive;
+        &::before{
+            content: attr(data-content);
+            position: absolute;
+            overflow: hidden;
+            max-width: 200px;
+            color: white;
+            animation: loading-text 3s linear;
+        }
+
+    }
+}
+@keyframes loader {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+@keyframes loading-text {
+    from { max-width: 0; }
+}
+

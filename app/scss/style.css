@@ -148,21 +148,6 @@ a, a:visited, a:hover {
   position: relative;
 }
 
-.check-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100px;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  right: -100px;
-  color: white;
-  background-color: #99E2D0;
-  border-radius: 0 16px 16px 0;
-  box-shadow: 4px 4px 8px gray;
-}
-
 .header {
   position: relative;
   z-index: 1000;
@@ -397,9 +382,74 @@ a, a:visited, a:hover {
   border-radius: 16px;
   line-height: 1.5;
   cursor: pointer;
+  overflow: hidden;
   opacity: 0;
   -webkit-animation: slideUp 1s forwards;
           animation: slideUp 1s forwards;
+}
+.menu .menu__starter__elem .check-icon, .menu .menu__dish__elem .check-icon, .menu .menu__desert__elem .check-icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-radius: 0 16px 16px 0;
+  width: 0;
+  height: 100%;
+  background-color: #99e2d0;
+}
+.menu .menu__starter__elem .check-icon > i, .menu .menu__dish__elem .check-icon > i, .menu .menu__desert__elem .check-icon > i {
+  display: none;
+  color: white;
+  transform: rotate(180deg);
+  -webkit-animation: rotation-icon 1s;
+          animation: rotation-icon 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+@-webkit-keyframes rotation-icon {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(0);
+  }
+}
+@keyframes rotation-icon {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(0);
+  }
+}
+.menu .menu__starter__elem:hover .check-icon, .menu .menu__dish__elem:hover .check-icon, .menu .menu__desert__elem:hover .check-icon {
+  -webkit-animation: change-width 1s ease;
+          animation: change-width 1s ease;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.menu .menu__starter__elem:hover .check-icon > i, .menu .menu__dish__elem:hover .check-icon > i, .menu .menu__desert__elem:hover .check-icon > i {
+  display: block;
+}
+@-webkit-keyframes change-width {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100px;
+  }
+}
+@keyframes change-width {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100px;
+  }
+}
+.menu .menu__starter__elem:hover .prix, .menu .menu__dish__elem:hover .prix, .menu .menu__desert__elem:hover .prix {
+  position: relative;
+  right: 100px;
+  transition: right 1s;
 }
 .menu .menu__starter__elem:nth-child(1), .menu .menu__dish__elem:nth-child(1), .menu .menu__desert__elem:nth-child(1) {
   -webkit-animation-delay: 0.1s;
@@ -455,26 +505,8 @@ a, a:visited, a:hover {
 }
 .menu .menu__starter__elem__footer__price, .menu .menu__dish__elem__footer__price, .menu .menu__desert__elem__footer__price {
   font-weight: bold;
-}
-.menu .menu__starter__elem:nth-child(1), .menu .menu__dish__elem:nth-child(1), .menu .menu__desert__elem:nth-child(1) {
-  -webkit-animation-delay: 0.1s;
-          animation-delay: 0.1s;
-}
-.menu .menu__starter__elem:nth-child(2), .menu .menu__dish__elem:nth-child(2), .menu .menu__desert__elem:nth-child(2) {
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
-}
-.menu .menu__starter__elem:nth-child(3), .menu .menu__dish__elem:nth-child(3), .menu .menu__desert__elem:nth-child(3) {
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
-}
-.menu .menu__starter__elem:nth-child(4), .menu .menu__dish__elem:nth-child(4), .menu .menu__desert__elem:nth-child(4) {
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
-}
-.menu .menu__starter__elem:nth-child(5), .menu .menu__dish__elem:nth-child(5), .menu .menu__desert__elem:nth-child(5) {
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
+  position: relative;
+  right: 0;
 }
 .menu .menu__dish {
   margin: 32px 0;

@@ -63,6 +63,55 @@
             line-height: 1.5;
             cursor: pointer;
 
+            // ------------------
+            overflow: hidden;
+            .check-icon{
+                position: absolute;
+                right: 0;
+                top: 0;
+                border-radius: 0 16px 16px 0;
+                width: 0;
+                height: 100%;
+                background-color: #99e2d0;
+                & > i{
+                    display: none;
+                    color: white;
+                    transform: rotate(180deg);
+                    animation: rotation-icon 1s;
+                    animation-fill-mode: both;
+                    @keyframes rotation-icon {
+                        from{
+                            transform: rotate(180deg);
+                        }to{
+                            transform: rotate(0);
+                        }
+                    }
+                }
+            }
+
+            &:hover .check-icon{
+                & > i{
+                    display: block;
+                }
+                animation: change-width 1s ease;
+                animation-fill-mode: both;
+                @keyframes change-width {
+                    from{
+                        width: 0;
+                    }to{
+                        width: 100px;
+                    }
+                }
+            }
+
+            &:hover .prix{
+                position: relative;
+                right : 100px;
+                transition: right 1s;
+            }
+
+            // -------------
+
             opacity: 0;
             animation: slideUp 1s forwards;
             &:nth-child(1){animation-delay: 0.1s;}
@@ -83,6 +132,8 @@
                 }
             }
 
+            // ------------
+
             &__title{
                 margin: 0;
             }
@@ -99,15 +150,12 @@
 
                 &__price{
                     font-weight: bold;
-                }
+                    //------------
+                    position: relative;
+                    right : 0;
+                }  
             }
         }
-
-        &__elem:nth-child(1){animation-delay: 0.1s;}
-        &__elem:nth-child(2){animation-delay: 0.2s;}
-        &__elem:nth-child(3){animation-delay: 0.3s;}
-        &__elem:nth-child(4){animation-delay: 0.4s;}
-        &__elem:nth-child(5){animation-delay: 0.5s;}
     }   
 
     .menu__dish{

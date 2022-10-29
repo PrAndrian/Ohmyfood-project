@@ -6,10 +6,10 @@
     border-radius: 25px;
     color : white;
     font-weight: 600;
-    background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9)); //Pouruoi ça ne fonctionne pas avec bg-col
+    background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
     cursor: pointer;
     &:hover{
-        background-image: linear-gradient(0deg,rgba(146, 86, 220, 0.694),rgba(255, 121, 217, 0.78)); //Pouruoi ça ne fonctionne pas avec bg-col
+        background-image: linear-gradient(0deg,rgba(146, 86, 220, 0.694),rgba(255, 121, 217, 0.78));
     }
 }
 

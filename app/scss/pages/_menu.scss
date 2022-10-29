@@ -8,6 +8,9 @@
         max-width: 1280px;
         margin: -64px auto 0 auto;
     }
+    .container__submenu{
+        gap : 10px; //arrangement
+    }
 
     .menu__hero{
         width: 100%;
@@ -48,12 +51,8 @@
         }
 
         &__elem{
-           
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
 
-            padding: 10px 20px 10px 10px;
+            // padding-left: 10px;
             margin : 16px 0;
 
             background-color: white;
@@ -66,54 +65,39 @@
             // ------------------
             overflow: hidden;
             .check-icon{
-                position: absolute;
-                right: 0;
-                top: 0;
-                border-radius: 0 16px 16px 0;
                 width: 0;
-                height: 100%;
+                height: -webkit-fit;
+                height: -moz-fit;
+                border-radius: 0 16px 16px 0;
                 background-color: #99e2d0;
+                
+                transition: width 0.8s;
+
                 & > i{
-                    display: none;
                     color: white;
-                    transform: rotate(180deg);
-                    animation: rotation-icon 1s;
-                    animation-fill-mode: both;
-                    @keyframes rotation-icon {
-                        from{
-                            transform: rotate(180deg);
-                        }to{
-                            transform: rotate(0);
-                        }
-                    }
+                    padding: 40px 30px ;
+                    
+                    transform: rotate(360deg);
+                    opacity : 0.5;
+                    transition: opacity 0.5s, transform 1.5s;
                 }
             }
 
-            &:hover .check-icon{
+            &:hover .check-icon, &:active .check-icon{
+                width:100px; 
+                transition: width 0.8s;
+                
                 & > i{
-                    display: block;
-                }
-                animation: change-width 1s ease;
-                animation-fill-mode: both;
-                @keyframes change-width {
-                    from{
-                        width: 0;
-                    }to{
-                        width: 100px;
-                    }
+                    transform: rotate(0);
+                    opacity : 1;
+                    transition: opacity 0.5s, transform 1.5s;
                 }
             }
-
-            &:hover .prix{
-                position: relative;
-                right : 100px;
-                transition: right 1s;
-            }
-
             // -------------
 
             opacity: 0;
             animation: slideUp 1s forwards;
+            //mixin ...
             &:nth-child(1){animation-delay: 0.1s;}
             &:nth-child(2){animation-delay: 0.2s;}
             &:nth-child(3){animation-delay: 0.3s;}
@@ -121,12 +105,12 @@
             &:nth-child(5){animation-delay: 0.5s;}
 
             @keyframes slideUp {
-                0% {
+                from {
                     transform: translatey(20px);
                     opacity: 0%;
                 }
                 
-                100% {
+                to {
                     transform: translatey(0px);
                     opacity: 100%;
                 }
@@ -134,15 +118,13 @@
 
             // ------------
 
-            &__title{
-                margin: 0;
-            }
-
-            &__footer{
-                flex: 100%;
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
+            
+            &__text{
+                padding: 15px 10px;
+                width: 100%;
+                &__title{
+                    margin: 0;
+                }
 
                 &__description,&__price{
                     margin: 0;
@@ -159,7 +141,7 @@
     }   
 
     .menu__dish{
-        margin: 32px 0;   
+        margin: 0;   
     }
     
     .menu__desert__elem{
@@ -168,11 +150,13 @@
 }
 
 @media (min-width: 1024px){
-        .container__submenu{
+    .container__submenu{
         display: flex;
         justify-content: center;
-        align-items: center;
+        flex-direction: row;
+        align-items: flex-start;
     }
+
     .menu__dish,.menu__desert,.menu__starter{
        width: 100%;
         min-width: 243px;

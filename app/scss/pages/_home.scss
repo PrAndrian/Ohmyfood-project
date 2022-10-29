@@ -37,7 +37,6 @@
 .function{
     padding: 22px 22px 40px 22px ;
     background-color: white;
-    // padding-top: 56px;
 
     &__list{
         margin : 0;
@@ -143,12 +142,16 @@
     .function__list{
         flex-direction: row;
     } 
-
+    
     .restaurant__cards{
         flex-direction: row;
         flex-wrap: wrap;
         gap: 18px;
         justify-content: center;
         align-items: center;
+    }
+
+    .restaurant{
+        height: 100%;
     }
 }

@@ -31,7 +31,9 @@
         visibility: hidden;
     }
 }
+
 @keyframes loading-text {
     from { max-width: 0; }
+    to{ max-width: 200px;}
 }
 

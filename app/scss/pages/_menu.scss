@@ -8,8 +8,9 @@
         max-width: 1280px;
         margin: -64px auto 0 auto;
     }
+    
     .container__submenu{
-        gap : 10px; //arrangement
+        gap : 10px;
     }
 
     .menu__hero{
@@ -51,8 +52,6 @@
         }
 
         &__elem{
-
-            // padding-left: 10px;
             margin : 16px 0;
 
             background-color: white;
@@ -61,73 +60,15 @@
 
             line-height: 1.5;
             cursor: pointer;
-
-            // ------------------
-            overflow: hidden;
-            .check-icon{
-                width: 0;
-                height: -webkit-fit;
-                height: -moz-fit;
-                border-radius: 0 16px 16px 0;
-                background-color: #99e2d0;
-                
-                transition: width 0.8s;
-
-                & > i{
-                    color: white;
-                    padding: 40px 30px ;
-                    
-                    transform: rotate(360deg);
-                    opacity : 0.5;
-                    transition: opacity 0.5s, transform 1.5s;
-                }
-            }
-
-            &:hover .check-icon, &:active .check-icon{
-                width:100px; 
-                transition: width 0.8s;
-                
-                & > i{
-                    transform: rotate(0);
-                    opacity : 1;
-                    transition: opacity 0.5s, transform 1.5s;
-                }
-            }
-            // -------------
-
-            opacity: 0;
-            animation: slideUp 1s forwards;
-            //mixin ...
-            &:nth-child(1){animation-delay: 0.1s;}
-            &:nth-child(2){animation-delay: 0.2s;}
-            &:nth-child(3){animation-delay: 0.3s;}
-            &:nth-child(4){animation-delay: 0.4s;}
-            &:nth-child(5){animation-delay: 0.5s;}
-
-            @keyframes slideUp {
-                from {
-                    transform: translatey(20px);
-                    opacity: 0%;
-                }
-                
-                to {
-                    transform: translatey(0px);
-                    opacity: 100%;
-                }
-            }
-
-            // ------------
-
-            
             &__text{
                 min-width: 0;
                 padding: 15px 10px;
                 width: 100%;
                 &__title{
                     margin: 0;
-                    white-space: nowrap;
-                    overflow-x: hidden;
-                    text-overflow: ellipsis;
+                    white-space: nowrap;//don't wrap text
+                    overflow-x: hidden;//hide text
+                    text-overflow: ellipsis;//Add ellipsis to hidden text
                 }
 
                 &__description,&__price{
@@ -142,13 +83,63 @@
 
                 &__price{
                     font-weight: bold;
-                    //------------
-                    position: relative;
-                    right : 0;
                 }  
             }
+            // ------- ANIMATION -------
+            overflow: hidden;
+            .check-icon{
+                width: 0;
+                height: -webkit-fit;
+                height: -moz-fit;
+                border-radius: 0 16px 16px 0;
+                background-color: #99e2d0;
+                // Animation check begin
+                transition: width 0.8s;
+
+                & > i{
+                    // Animation rotate back
+                    color: white;
+                    padding: 40px 30px ;
+                    transform: rotate(-360deg);
+                }
+            }
+
+            &:hover .check-icon, &:active .check-icon{
+                width:100px; 
+                // Animation check back
+                transition: width 0.8s;
+                
+                & > i{
+                    // Animation rotate begin
+                    transform: rotate(0);
+                    opacity : 1;
+                    transition: opacity 0.5s, transform 0.8s;
+                }
+            }
+            // Animation slidUp
+            opacity: 0;
+            animation: slideUp 1s forwards;
+            @keyframes slideUp {
+                from {
+                    transform: translatey(20px);
+                    opacity: 0%;
+                }
+                
+                to {
+                    transform: translatey(0px);
+                    opacity: 100%;
+                }
+            }
+            // Animation slidUp delay
+            @mixin delay-animation-card ($nb_card){
+                @for $var from 1 to $nb_card {
+                    &:nth-child(#{$var}){animation-delay: calc($var*(0.1s));}
+                }
+            }
+            @include delay-animation-card(6);
+           
         }
-    }   
+    } 
 
     .menu__dish{
         margin: 0;   

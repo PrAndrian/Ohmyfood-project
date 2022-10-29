@@ -1,20 +1,25 @@
 .heart-icon{
-    position:absolute ;
+    position: absolute;
     right:14px;
     cursor: pointer;
-    &:hover,&:active,&:focus{
-        //opacité animation ...
+    &:hover{
         &::before{
-                z-index: 1000;
-                font-family: "Font Awesome 5 Free";
-                font-weight: 900;
-                content: "\f004";
-                background: linear-gradient(0deg,#9356dc,#ff79da);;
-                background-clip: text;   
-                -webkit-text-fill-color: transparent;
-                -moz-background-clip: text;
-                -moz-text-fill-color: transparent;
-                position: relative;
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            content: "\f004";
+            background: linear-gradient(0deg,#9356dc,#ff79da);;
+            background-clip: text;   
+            -webkit-text-fill-color: transparent;
+            -moz-background-clip: text;
+            -moz-text-fill-color: transparent;
+            position: relative;
+
+            animation: apparition-heart 0.5s;
+            animation-fill-mode: forwards;
+            @keyframes apparition-heart {
+                from{opacity: 0.5;}
+                to{opacity: 1;}
+            }
         }
     }
 }

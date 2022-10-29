@@ -151,7 +151,6 @@ a, a:visited, a:hover {
   -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
-  position: relative;
   -webkit-animation: apparition-heart 0.5s;
           animation: apparition-heart 0.5s;
   -webkit-animation-fill-mode: forwards;

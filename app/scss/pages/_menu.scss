@@ -69,7 +69,7 @@
                 &__title{
                     margin: 0;
                     white-space: nowrap;//don't wrap text
-                    overflow-x: hidden;//hide text
+                    overflow-x: hidden;//hide overflowing text
                     text-overflow: ellipsis;//Add ellipsis to hidden text
                 }
 
@@ -118,6 +118,7 @@
                     transition: opacity 0.5s, transform 0.8s;
                 }
             }
+
             // Animation slidUp
             opacity: 0;
             animation: slideUp 1s forwards;
@@ -132,6 +133,7 @@
                     opacity: 100%;
                 }
             }
+            
             // Animation slidUp delay
             @mixin delay-animation-card ($nb_card){
                 @for $var from 1 to $nb_card {

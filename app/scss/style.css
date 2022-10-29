@@ -70,6 +70,7 @@ a, a:visited, a:hover {
 .loader-text {
   color: #FF79DA;
   font-family: "Shrikhand", cursive;
+  font-size: 34px;
 }
 .loader-text::before {
   content: attr(data-content);

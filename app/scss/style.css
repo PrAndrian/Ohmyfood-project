@@ -451,14 +451,23 @@ a, a:visited, a:hover {
   }
 }
 .menu .menu__starter__elem__text, .menu .menu__dish__elem__text, .menu .menu__desert__elem__text {
+  min-width: 0;
   padding: 15px 10px;
   width: 100%;
 }
 .menu .menu__starter__elem__text__title, .menu .menu__dish__elem__text__title, .menu .menu__desert__elem__text__title {
   margin: 0;
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
 }
 .menu .menu__starter__elem__text__description, .menu .menu__starter__elem__text__price, .menu .menu__dish__elem__text__description, .menu .menu__dish__elem__text__price, .menu .menu__desert__elem__text__description, .menu .menu__desert__elem__text__price {
   margin: 0;
+}
+.menu .menu__starter__elem__text__description, .menu .menu__dish__elem__text__description, .menu .menu__desert__elem__text__description {
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
 }
 .menu .menu__starter__elem__text__price, .menu .menu__dish__elem__text__price, .menu .menu__desert__elem__text__price {
   font-weight: bold;

@@ -356,13 +356,15 @@ a, a:visited, a:hover {
   }
 }
 .menu .container__menu {
-  margin-top: -64px;
   border-radius: 32px 32px 0 0;
   background-color: #f6f6f6;
   z-index: 1;
   position: relative;
   max-width: 1280px;
   margin: -64px auto 0 auto;
+}
+.menu .container__menu-variante {
+  margin: -150px auto 0 auto;
 }
 .menu .container__submenu {
   gap: 10px;

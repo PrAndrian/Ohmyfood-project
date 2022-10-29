@@ -194,9 +194,8 @@ a, a:visited, a:hover {
 }
 
 .footer {
-  height: 196px;
   background-color: #353535;
-  padding: 0 22px;
+  padding: 0 22px 26px 22px;
 }
 .footer__title {
   font-family: "Shrikhand", cursive;

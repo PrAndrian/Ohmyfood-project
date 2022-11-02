@@ -1,0 +1,5 @@
+@mixin delay-animation-card ($nb_card){
+    @for $var from 1 to $nb_card {
+        &:nth-child(#{$var}){animation-delay: calc($var*(0.1s));}
+    }
+}

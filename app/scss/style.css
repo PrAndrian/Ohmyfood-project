@@ -76,7 +76,6 @@ a, a:visited, a:hover {
   content: attr(data-content);
   position: absolute;
   overflow: hidden;
-  max-width: 200px;
   color: white;
   -webkit-animation: loading-text 3s linear;
           animation: loading-text 3s linear;
